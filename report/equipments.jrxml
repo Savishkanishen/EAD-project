@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="equipments" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="299a7ac9-b0a2-4637-92a2-4efd1c94813b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL"/>
+	<queryString language="SQL">
+		<![CDATA[select * from equipments]]>
+	</queryString>
+	<field name="EquipmentID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="EquipmentID"/>
+		<property name="com.jaspersoft.studio.field.label" value="EquipmentID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipments"/>
+	</field>
+	<field name="EquipmentName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EquipmentName"/>
+		<property name="com.jaspersoft.studio.field.label" value="EquipmentName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipments"/>
+	</field>
+	<field name="Category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Category"/>
+		<property name="com.jaspersoft.studio.field.label" value="Category"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipments"/>
+	</field>
+	<field name="MaintenanceDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="MaintenanceDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="MaintenanceDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipments"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="20" width="370" height="30" uuid="f26b71d5-7d77-40e5-b0a5-724004338c6c"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EQUIPMENTS  AND MAINTAINANCE DATES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="100" height="30" uuid="c7ff60ab-3392-4599-b281-97b8a932ee7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="2" width="100" height="30" uuid="36dc992d-1547-4341-a4f9-0dddc9b11dc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="2" width="120" height="30" uuid="f5c36c9b-417a-4765-ad10-f96be332d13c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CATEGORY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="190" height="30" uuid="f3773bc4-3aad-42ad-bbd9-85321560eed0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAINTAINANCE DATE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="31" width="591" height="1" uuid="845162d8-ab86-4f6f-8589-abca9cd301e3"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="1" width="100" height="31" uuid="3c1a9479-90c2-4a60-8abf-791d66e098af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EquipmentID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="140" height="30" uuid="23142ae1-1767-473d-b76e-95296bb26ec0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EquipmentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="100" height="30" uuid="da3bda80-084d-49ed-8be0-59067e3f7cb4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="155" height="30" uuid="7f232090-dbef-4c35-90ab-b76ba06b5491"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MaintenanceDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
